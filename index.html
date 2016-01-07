@@ -41,9 +41,7 @@ layout: default
   <div class='full-screen'>
     <div class='xy-center'>
       <h4>Contact us to setup a 15-minute consultation session:</h3>
-      <form action="//formspree.io/mglobel@gmail.com"
-            method="POST">
-          <input type="hidden" name="_cc" value="danbuzaid@gmail.com" />
+      <form id="contactform" method="POST">
           <div class="row">
             <label>Name:</label>
             <input type="text" name="name">
@@ -63,6 +61,10 @@ layout: default
           <input type="text" name="_gotcha" style="display:none" />
           <input type="submit" value="Request Project Consultation">
       </form>
+      <script>
+        var contactform =  document.getElementById('contactform');
+        contactform.setAttribute('action', '//formspree.io/' + 'info' + '@' + 'getmikeanddan' + '.' + 'com');
+      </script>
     </div>
   </div>
 </div>
