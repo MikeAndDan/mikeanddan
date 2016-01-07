@@ -40,7 +40,28 @@ layout: default
 	</div>
   <div class='full-screen'>
     <div class='xy-center'>
-      <iframe src="https://docs.google.com/forms/d/1g5WNOKVyGMZk-2TfKgZKqg2Mc3nVoPXfI6cFsngVcMc/viewform?embedded=true" width="760" height="950" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+      <form action="//formspree.io/mglobel@gmail.com"
+            method="POST">
+          <input type="hidden" name="_cc" value="danbuzaid@gmail.com" />
+          <div class="row">
+            <label>Name:</label>
+            <input type="text" name="name">
+          </div>
+          <div class="row">
+            <label>Email:</label>
+            <input type="email" name="_replyto">
+          </div>
+          <div class="row">
+            <label>Website/Business</label>
+            <input type="text" name="website">
+          </div>
+          <div class="row">
+            <label>Tell us some background information on the problem(s) you're looking to solve:</label>
+            <input type="textarea" name="notes">
+          </div>
+          <input type="text" name="_gotcha" style="display:none" />
+          <input type="submit" value="Send">
+      </form>
     </div>
   </div>
 </div>
