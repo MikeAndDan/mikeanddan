@@ -20,46 +20,54 @@ layout: default
 	<div class='full-screen'>
 		<div class='col-xs-12 xy-center'>
 			<h3>Website and Mobile Launch</h1>
-			<p>[Awesome Rocket Ship Icon]</p>
+			<img src="/assets/rocketship.png" />
 		</div>
 	</div>
 	<div class='full-screen'>
 		<div class='col-xs-12 xy-center'>
 			<h3>Design and Optimization</h1>
-			<p>[Cursor Site Re-Design Icon]</p>
+			<img src="/assets/magnifyglass.png" />
 		</div>
 	</div>
 	<div class='full-screen'>
 		<div class='col-xs-12 xy-center'>
 			<h3>Business Automation</h1></h1>
-			<p>[$ on Assembly Line Roller Icon]</p>
-			<br>
-			<a href='#' class='btn-ghost'>Start a Project</a>
+			<img src="/assets/conveyor.png" />
 
 		</div>
 	</div>
   <div class='full-screen'>
     <div class='xy-center'>
       <h4>Contact us to setup a 15-minute consultation session:</h3>
-      <form id="contactform" method="POST">
-          <div class="row">
-            <label>Name:</label>
-            <input type="text" name="name">
+      <form class="form-horizontal" id="contactform" method="POST">
+        
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Name:</label>
+          <div class="col-sm-10">
+            <input class="form-control" type="text" name="name">
           </div>
-          <div class="row">
-            <label>Email:</label>
-            <input type="email" name="_replyto">
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Email:</label>
+          <div class="col-sm-10">
+            <input class="form-control" type="email" name="_replyto">
           </div>
-          <div class="row">
-            <label>Website/Business</label>
-            <input type="text" name="website">
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Business</label>
+          <div class="col-sm-10">
+            <input class="form-control" type="email" name="business">
           </div>
-          <div class="row">
-            <label>Tell us some background information on the problem(s) you're looking to solve:</label>
-            <input type="textarea" name="notes">
-          </div>
-          <input type="text" name="_gotcha" style="display:none" />
-          <input type="submit" value="Request Project Consultation">
+        </div>
+
+        <div class="form-group">
+          <label>Tell us some background information on the problem(s) you're looking to solve:</label>
+          <textarea class="form-control" rows="3" name="notes"></textarea>
+        </div>
+        <input type="text" name="_gotcha" style="display:none" />
+        <input class="btn btn-success" type="submit" value="Request Project Consultation">
       </form>
       <script>
         var contactform =  document.getElementById('contactform');
