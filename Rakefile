@@ -4,13 +4,13 @@ desc "Deploy"
 task :deploy do
   puts "## Deploying to Github Pages.."
 
-  deploy_dir = "_site"
-  public_dir = "public"
+  build_dir = "_site"
+  deploy_dir = "gh-pages"
 
   (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) }
 
-  puts "## Copying #{public_dir} to #{deploy_dir}"
-  cp_r "#{public_dir}/.", deploy_dir
+  puts "## Copying #{build_dir} to #{deploy_dir}"
+  cp_r "#{build_dir}/.", deploy_dir
 
   cd "#{deploy_dir}" do
     system "git add ."
