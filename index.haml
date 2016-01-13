@@ -56,16 +56,16 @@ layout: default
       .col-md-5
         %h3
           Beyond getting your business online, we aim to get your <i>business
-          processes</i> online. Using cloud-powered automation tools we can
-          get your logistics organized and digitized, leaving you free to focus
-          on your customer's experience.
+          processes</i> online. Using cloud automation tools we can
+          get your business' logistics organized and digitized, leaving you free
+          to focus on your customer's experience.
     %hr
       .row
-        .col-md-6.col-md-offset-3
+        .col-md-6.col-md-offset-3.text-center
           %h4
             And more! Each situation is unique, and we like to recommend the
-            best tool for the job, even if that means another firm or service.
-            So contact us today to setup a 15-minute consultation session:
+            best tool for the job. Contact us today to setup your first
+            consultation session.
           %form#contactform.form-horizontal{:method => "POST"}
             .form-group
               %label.col-sm-2.control-label Name:
@@ -80,8 +80,10 @@ layout: default
               .col-sm-10
                 %input.form-control{:name => "business", :type => "email"}
             .form-group
-              %label Tell us some background information on the problem(s) you're looking to solve:
-              %textarea.form-control{:name => "notes", :rows => "3"}
+              .col-sm-2
+                %label Info:
+              .col-sm-10
+                %textarea.form-control{:name => "notes", :rows => "3"}
             %input{:name => "_gotcha", :style => "display:none", :type => "text"}/
             %input.btn.btn-success.btn-lg{:type => "submit", :value => "Submit"}
           :javascript
