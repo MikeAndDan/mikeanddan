@@ -4,7 +4,7 @@ desc "Deploy"
 task :deploy do
   puts "## Deploying to Github Pages.."
 
-  deploy_dir = "deploy"
+  deploy_dir = "_site"
   public_dir = "public"
 
   (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) }
