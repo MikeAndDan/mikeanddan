@@ -66,26 +66,26 @@ layout: default
             And more! Each situation is unique, and we like to recommend the
             best tool for the job. Contact us today to setup your first
             consultation session.
-          %form#contactform.form-horizontal{:method => "POST"}
+          %form#contactform.form-horizontal{method: "POST"}
             .form-group
               %label.col-sm-2.control-label Name:
               .col-sm-10
-                %input.form-control{:name => "name", :type => "text"}
+                %input.form-control{name: "name", type: "text"}
             .form-group
               %label.col-sm-2.control-label Email:
               .col-sm-10
-                %input.form-control{:name => "_replyto", :type => "email"}
+                %input.form-control{name: "_replyto", type: "email"}
             .form-group
               %label.col-sm-2.control-label Business:
               .col-sm-10
-                %input.form-control{:name => "business", :type => "email"}
+                %input.form-control{name: "business", type: "email"}
             .form-group
               .col-sm-2
                 %label Info:
               .col-sm-10
-                %textarea.form-control{:name => "notes", :rows => "3"}
-            %input{:name => "_gotcha", :style => "display:none", :type => "text"}/
-            %input.btn.btn-success.btn-lg{:type => "submit", :value => "Submit"}
+                %textarea.form-control{name: "notes", rows: "3"}
+            %input{name: "_gotcha", style: "display:none", type: "text"}/
+            %input.btn.btn-success.btn-lg{type: "submit", value: "Submit"}
           :javascript
             var contactform =  document.getElementById('contactform');
             contactform.setAttribute('action', '//formspree.io/' + 'info' + '@' + 'getmikeanddan' + '.' + 'com');
