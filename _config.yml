@@ -10,7 +10,7 @@ title: M & D | Modern Business Consulting
 email: info@getmikeanddan.com
 description: > # this means to ignore newlines until "baseurl:"
   Mike and Dan is all about helping you fullfil your website needs. From fast fixes to full features,
-  we are confident in our ability to be a temporary dev guy that intergrates with your existing company.
+  we are confident in our ability to be a temporary dev guy that integrates with your existing company.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://getmikeanddan.com" # the base hostname & protocol for your site
 twitter_username: getmikeanddan

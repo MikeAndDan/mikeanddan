@@ -6,18 +6,17 @@ layout: default
     .stroke-text
       %h1 Mike & Dan&nbsp;
     %h2 Fast Fixes to Full Features
-    %a.btn-ghost{:href => "#"} LEARN MORE
+    %a.btn-ghost{href: "#"} LEARN MORE
 .dark-bg
   .container
     .row
-      .col-md-6.col-md-offset-3.text-center
+      .col-md-10.col-md-offset-1.text-center
         %h2
           How Can We Help?
         %h3
-          Mike & Dan is a tag-team knockout for your business. No jokes, no fluff,
-          we WILL find a way to make your business better, faster, and happier.
-          Growing your business is a constant journey, and want to make sure you
-          have the best time along the way.
+          Mike & Dan is a tag-team knockout for your business. From front-end to
+          back, we can find a way to make your business better, faster, and
+          happier. Here are some of the services we commonly offer:
 
     %hr
     .row
@@ -29,25 +28,21 @@ layout: default
         %img{:src => "/assets/rocketship.png", class: 'img-responsive'}/
       .col-md-5
         %h3
-          More than 85% of the U.S. is on the internet and two-thirds of the populations
-          owns a smartphone. From idea to design, to software that you can actually hold
-          in your hand, we'll bring your business online and under your control.
-
+          We like to build <u>responsive</u>, <u>fast</u>, and <u>accessible</u>
+          websites that are an extension of you and your business. And we like
+          to turn those websites into mobile apps as well!
     %hr
     %h2.text-center
       Laser-Focused Optimizations
     .row
       .col-md-5.col-md-offset-2
         %h3
-          Good software is about knowing what to do. We only start work on a
-          project
-          %u after
-          we've identified
-          %u exactly
-          where we can create
-          the most value for the lowest investment.
+          Our specialty is finding the right solution for each problem.
+          Good software is about knowing what to do, and we only start work on a
+          project <u>after</u> we've worked with you to identify <u>exactly
+          where</u> we can provide value.
       .col-md-2
-        %img{:src => "/assets/magnifyglass.png", class: 'img-responsive'}/
+        %img{src: "/assets/magnifyglass.png", class: 'img-responsive'}/
 
     %hr
     .row
@@ -56,19 +51,20 @@ layout: default
           Automated Business Services
     .row
       .col-md-2.col-md-offset-2
-        %img{:src => "/assets/conveyor.png", class: 'img-responsive'}/
+        %img{src: "/assets/conveyor.png", class: 'img-responsive'}/
       .col-md-5
         %h3
-          In today's technology-driven world, there's a tool or service that can
-          automate just about every aspect of running your business. We'll help
-          you put your business online, front-end to back, so you can do what you
-          love,anywhere and eveywhere.
-
+          Beyond getting your business online, we aim to get your <i>business
+          processes</i> online. Using cloud-powered business tools we can
+          help you get your processes organized and digitized, leaving you free
+          to focus on your customers.
     %hr
       .row
         .col-md-6.col-md-offset-3
           %h4
-            Contact us to setup a 15-minute consultation session:
+            And more! Each situation is unique, and we like to recommend the
+            best tool for the job, even if that means another firm or service.
+            So contact us today to setup a 15-minute consultation session:
           %form#contactform.form-horizontal{:method => "POST"}
             .form-group
               %label.col-sm-2.control-label Name:
@@ -90,5 +86,4 @@ layout: default
           :javascript
             var contactform =  document.getElementById('contactform');
             contactform.setAttribute('action', '//formspree.io/' + 'info' + '@' + 'getmikeanddan' + '.' + 'com');
-
     %hr
