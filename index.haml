@@ -1,0 +1,94 @@
+---
+layout: default
+---
+.hero
+  .col-xs-12.xy-center.text-center
+    .stroke-text
+      %h1 Mike & Dan&nbsp;
+    %h2 Fast Fixes to Full Features
+    %a.btn-ghost{:href => "#"} LEARN MORE
+%div{style: 'background:#cfcfcf'}
+  .container
+    .row
+      .col-md-6.col-md-offset-3
+        %h2
+          How Can We Help?
+        %h3
+          Mike & Dan is a tag-team knockout for your business. No jokes, no fluff,
+          we WILL find a way to make your business better, faster, and happier.
+          Growing your business is a constant journey, and want to make sure you
+          have the best time along the way.
+
+    %hr
+    .row
+      .col-md-offset-2
+        %h2
+          Website and Mobile Launch
+    .row
+      .col-md-2.col-md-offset-2
+        %img{:src => "/assets/rocketship.png", class: 'img-responsive'}/
+      .col-md-5
+        %h3
+          More than 85% of the U.S. is on the internet and two-thirds of the populations
+          owns a smartphone. From idea to design, to software that you can actually hold
+          in your hand, we'll bring your business online and under your control.
+
+    %hr
+    %h2.text-center
+      Laser-Focused Optimizations
+    .row
+      .col-md-5.col-md-offset-2
+        %h3
+          Good software is about knowing what to do. We only start work on a
+          project
+          %u after
+          we've identified
+          %u exactly
+          where we can create
+          the most value for the lowest investment.
+      .col-md-2
+        %img{:src => "/assets/magnifyglass.png", class: 'img-responsive'}/
+
+    %hr
+    .row
+      .col-md-offset-2
+        %h2
+          Automated Business Services
+    .row
+      .col-md-2.col-md-offset-2
+        %img{:src => "/assets/conveyor.png", class: 'img-responsive'}/
+      .col-md-5
+        %h3
+          In today's technology-driven world, there's a tool or service that can
+          automate just about every aspect of running your business. We'll help
+          you put your business online, front-end to back, so you can do what you
+          love,anywhere and eveywhere.
+
+    %hr
+      .row
+        .col-md-6.col-md-offset-3
+          %h4
+            Contact us to setup a 15-minute consultation session:
+          %form#contactform.form-horizontal{:method => "POST"}
+            .form-group
+              %label.col-sm-2.control-label Name:
+              .col-sm-10
+                %input.form-control{:name => "name", :type => "text"}
+            .form-group
+              %label.col-sm-2.control-label Email:
+              .col-sm-10
+                %input.form-control{:name => "_replyto", :type => "email"}
+            .form-group
+              %label.col-sm-2.control-label Business:
+              .col-sm-10
+                %input.form-control{:name => "business", :type => "email"}
+            .form-group
+              %label Tell us some background information on the problem(s) you're looking to solve:
+              %textarea.form-control{:name => "notes", :rows => "3"}
+            %input{:name => "_gotcha", :style => "display:none", :type => "text"}/
+            %input.btn.btn-success.btn-lg{:type => "submit", :value => "Submit"}
+          :javascript
+            var contactform =  document.getElementById('contactform');
+            contactform.setAttribute('action', '//formspree.io/' + 'info' + '@' + 'getmikeanddan' + '.' + 'com');
+
+    %hr

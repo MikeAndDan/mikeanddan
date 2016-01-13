@@ -1,11 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans:700,400);
-body {
+.hero {
 	font-family: 'Noto Sans', sans-serif;
 }
 
 .full-screen {
 	position: relative;
-	height: 52vw;
+	height: 500px;
 	width: 100%;
 	text-align: center;
 }
@@ -32,6 +32,10 @@ body {
   }
 }
 
+h2, h3, h4 {
+  font-weight: 300
+}
+
 .xy-center {
   position: absolute;
   top: 50%;
@@ -49,14 +53,8 @@ body {
 	margin-top: 15px;
 	display: inline-block;
 }
-// .stroke-text {
- //  background-image: repeating-linear-gradient(
- //    135deg,
- //    #606dbc,
- //    #606dbc 2px,
- //    #465298 2px,
- //    #465298 4px
- //  );
- //  -webkit-text-fill-color: transparent;
- //  -webkit-background-clip: text;
-// }
+
+hr {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
