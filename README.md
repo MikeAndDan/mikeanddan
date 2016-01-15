@@ -8,6 +8,7 @@ Configuration based on example from [winstonyw](http://winstonyw.com/2013/02/24/
 ##### Initial Configuration
 From master:
 
+0. `git fetch origin`* a good general habit when opening up a project
 1. `mkdir gh-pages`
 2. `cd gh-pages`
 3. `git init .`
