@@ -4,10 +4,13 @@ layout: default
 .hero
   .col-xs-12.xy-center.text-center
     .stroke-text
-      %h1 Mike & Dan
+      %h1
+        Mike
+        %span{style: 'font-size: 5vw;vertical-align:middle'} &
+        Dan
     %h2 Fast Fixes to Full Features
     %a.btn-ghost{href: "#"} LEARN MORE
-.dark-bg
+.gradient-bg
   .container
     .row
       .col-md-9.col-md-offset-1.text-center
@@ -17,7 +20,10 @@ layout: default
           Mike & Dan is a tag-team knockout for your business. From front-end to
           back, we'll make sure your business is running smoothly and connected
           to the modern world. Below are some of the services that we commonly
-          provide for business, startups, and non-profits.
+          provide for businesses, startups, and non-profits.
+
+.dark-bg
+  .container{style: 'padding-top:50px;'}
     %hr
     .row
       .col-md-3.col-md-offset-1.col-xs-12
@@ -36,9 +42,9 @@ layout: default
         %h2
           Laser-Focused Optimizations
         %h3
-          We only start working on a project once we've identified where
-          <u>exactly</u> we can provide the most value in a project. That way
-          you can focus on growing your business, without the burden of
+          We only start working on a project after we've identified
+          <u>exactly</u> where we can provide the most value in a project.
+          That way you can focus on growing your business, without the burden of
           bringing on a full-time developer.
       .col-md-3.col-xs-12
         %img{src: "/assets/magnifyglass.png", class: 'img-responsive'}
@@ -57,11 +63,12 @@ layout: default
           and enjoy cruise control).
     %hr
       .row
-        .col-md-6.col-md-offset-3.text-center
-          %h4
+        .col-md-6.col-md-offset-3
+          %h3
             Ready to find out how the 21st century can affect your business?
+          %h4
             Contact us today to start a conversation and see where Mike & Dan
-            can take you.
+            can help.
           %form#contactform.form-horizontal{method: "POST"}
             .form-group
               %label.col-sm-2.control-label Name:
@@ -76,12 +83,12 @@ layout: default
               .col-sm-10
                 %input.form-control{name: "business", type: "email"}
             .form-group
-              .col-sm-2
-                %label Message:
+              %label.col-sm-2.control-label Message:
               .col-sm-10
                 %textarea.form-control{name: "notes", rows: "3"}
             %input{name: "_gotcha", style: "display:none", type: "text"}/
-            %input.btn.btn-success.btn-lg{type: "submit", value: "Start a Convo"}
+            .text-center
+              %input.btn.btn-success.btn-lg{type: "submit", value: "Start a Convo"}
           :javascript
             var contactform =  document.getElementById('contactform');
             contactform.setAttribute('action', '//formspree.io/' + 'info' + '@' + 'getmikeanddan' + '.' + 'com');
