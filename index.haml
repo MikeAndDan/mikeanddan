@@ -10,14 +10,14 @@ layout: default
 .dark-bg
   .container
     .row
-      .col-md-10.col-md-offset-1.text-center
+      .col-md-9.col-md-offset-1.text-center
         %h2
           How Can We Help?
         %h3
           Mike & Dan is a tag-team knockout for your business. From front-end to
-          back, we'll help make sure your business is running smoothly, and with
-          all the modern conveniences today has to offer. Here are some of the
-          services we commonly provide:
+          back, we'll make sure your business is running smoothly and connected
+          to the modern world. Below are some of the services that we commonly
+          provide for business, startups, and non-profits.
     %hr
     .row
       .col-md-3.col-md-offset-1.col-xs-12
@@ -27,19 +27,19 @@ layout: default
           Website and Mobile Launch
         %h3
           We like to build <u>responsive</u>, <u>fast</u>, and <u>accessible</u>
-          websites that are an extension of you and your business. And we like
-          to turn those websites into mobile apps! That way you and your
-          customers can connect anywhere and everywhere.
+          websites, that act as an extension of you and your business. And we
+          like to turn those websites into mobile apps! That way you can connect
+          with your customers anywhere and everywhere.
     %hr
     .row
       .col-md-6.col-md-offset-1.col-xs-12
         %h2
           Laser-Focused Optimizations
         %h3
-          Good software is about knowing what to do. We only start work on a
-          project after we've worked with you to identify <u>exactly</u>
-          where we can provide value. That way you can grow your business
-          <u>without</u> the cost of a full-time developer.
+          We only start working on a project once we've identified where
+          <u>exactly</u> we can provide the most value in a project. That way
+          you can focus on growing your business, without the burden of
+          bringing on a full-time developer.
       .col-md-3.col-xs-12
         %img{src: "/assets/magnifyglass.png", class: 'img-responsive'}
     %hr
@@ -50,17 +50,18 @@ layout: default
         %h2
           Automated Business Services
         %h3
-          Beyond getting your business online, we aim to get your <i>business
-          processes</i> online. Using cloud automation we can get your business'
-          logistics organized and digitized, leaving you free to focus on your
-          customer's experience.
+          Beyond getting your business online, we aim to get your
+          <i>processes</i> online. Using a special mix of the right cloud
+          services for each scenario, we'll help you organize and automate the
+          basics, freeing you to focus on the customer (or just sit back
+          and enjoy cruise control).
     %hr
       .row
         .col-md-6.col-md-offset-3.text-center
           %h4
-            And more! Each situation is unique, and we like to recommend the
-            best tool for the job. Contact us today to setup your first
-            consultation session.
+            Ready to find out how the 21st century can affect your business?
+            Contact us today to start a conversation and see where Mike & Dan
+            can take you.
           %form#contactform.form-horizontal{method: "POST"}
             .form-group
               %label.col-sm-2.control-label Name:
@@ -71,16 +72,16 @@ layout: default
               .col-sm-10
                 %input.form-control{name: "_replyto", type: "email"}
             .form-group
-              %label.col-sm-2.control-label Business:
+              %label.col-sm-2.control-label Organization Name or Website:
               .col-sm-10
                 %input.form-control{name: "business", type: "email"}
             .form-group
               .col-sm-2
-                %label Info:
+                %label Message:
               .col-sm-10
                 %textarea.form-control{name: "notes", rows: "3"}
             %input{name: "_gotcha", style: "display:none", type: "text"}/
-            %input.btn.btn-success.btn-lg{type: "submit", value: "Submit"}
+            %input.btn.btn-success.btn-lg{type: "submit", value: "Start a Convo"}
           :javascript
             var contactform =  document.getElementById('contactform');
             contactform.setAttribute('action', '//formspree.io/' + 'info' + '@' + 'getmikeanddan' + '.' + 'com');
