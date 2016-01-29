@@ -1,94 +1,145 @@
 ---
 layout: default
 ---
-.hero
-  .col-xs-12.xy-center.text-center
-    .stroke-text
-      %h1
-        Mike
-        %span{style: 'font-size: 5vw;vertical-align:middle'} &
-        Dan
-    %h2 Fast Fixes to Full Features
-.gradient-bg
+%header
   .container
-    .row
-      .col-md-9.col-md-offset-1.text-center
-        %h2
-          How Can We Help?
-        %h3
-          Mike & Dan is a tag-team knockout for your business. From front-end to
-          back, we'll make sure your business is running smoothly and connected
-          to the modern world. Below are some of the services that we commonly
-          provide for businesses, startups, and non-profits.
+    %h1.text-center Freelance Web Designer and Developers
+.hero.primary-bg
+  .text-center
+    %h1
+      Fast Fixes to Full Features
+      %br
+      Let us help you
+    %a{href:"#contact", class: 'btn cta-btn', style: 'margin-top:25px;'}
+      Get Started
+      %i.fa.fa-chevron-down
 
-.dark-bg
-  .container{style: 'padding-top:50px;'}
-    %hr
+.container
+  .row
+    .col-sm-4
+      .content-box
+        .icon
+          %span.fa-stack.fa-2x
+            %i.fa.fa-circle.fa-stack-2x
+            %i.fa.fa-paint-brush.fa-stack-1x.fa-inverse
+        %h4.text-center
+          Design
+        %p 
+          The first, and most important step, to a succesful project is to build your brand and identity. We’ll help you get from IDEA to MOCKUP, making sure you website or mobile app is an organic extension of your business. Each project starts with a WIREFRAME so that you don’t waste time or money on unwanted development.
+    .col-sm-4
+      .content-box
+        .icon
+          %span.fa-stack.fa-2x
+            %i.fa.fa-circle.fa-stack-2x
+            %i.fa.fa-code.fa-stack-1x.fa-inverse
+        %h4.text-center
+          Develop
+        %p
+          Our process includes rapid prototyping with HTML5, CSS3, and JAVASCRIPT. We use popular frameworks like RAILS, BOOTSTRAP, and REACTJS so that you’re never left stranded with custom, costly code. From MVP to full-featured, we’ll make sure your business can grow into the future, and even be ready for a future developer.
+    .col-sm-4
+      .content-box
+        .icon
+          %span.fa-stack.fa-2x
+            %i.fa.fa-circle.fa-stack-2x
+            %i.fa.fa-line-chart.fa-stack-1x.fa-inverse
+        %h4.text-center
+          Optimize
+        %p
+          Releasing your website is just the first step to building a successful company. Our greatest value is helping you identify how you can make the most of your business through A/B TESTING, CRM AUTOMATION, and LEAD GENERATION. Building a website isn’t just about delivering content, it’s about ENGAGING your customers.
+#contact.primary-bg
+  .container{style: 'margin-top:50px'}
     .row
-      .col-md-3.col-md-offset-1.col-xs-12
-        %img{src: "/assets/rocketship.png", class: 'img-responsive'}
-      .col-md-6.col-xs-12
-        %h2
-          Website and Mobile Launch
-        %h3
-          We like to build <u>responsive</u>, <u>fast</u>, and <u>accessible</u>
-          websites, that act as an extension of you and your business. And we
-          like to turn those websites into mobile apps! That way you can connect
-          with your customers anywhere and everywhere.
-    %hr
-    .row
-      .col-md-6.col-md-offset-1.col-xs-12
-        %h2
-          Laser-Focused Optimizations
-        %h3
-          We only start working on a project after we've identified
-          <u>exactly</u> where we can provide the most value in a project.
-          That way you can focus on growing your business, without the burden of
-          bringing on a full-time developer.
-      .col-md-3.col-xs-12
-        %img{src: "/assets/magnifyglass.png", class: 'img-responsive'}
-    %hr
-    .row
-      .col-md-3.col-md-offset-1.col-xs-12
-        %img{src: "/assets/conveyor.png", class: 'img-responsive', style: 'padding-top: 10px;'}
-      .col-md-6.col-xs-12
-        %h2
-          Automated Business Services
-        %h3
-          Beyond getting your business online, we aim to get your
-          <i>processes</i> online. Using a special mix of the right cloud
-          services for each scenario, we'll help you organize and automate the
-          basics, freeing you to focus on the customer (or just sit back
-          and enjoy cruise control).
-    %hr
-      .row
-        .col-md-6.col-md-offset-3
-          %h3
-            Ready to find out how the 21st century can affect your business?
-          %h4
-            Contact us today to start a conversation and see where Mike & Dan
-            can help.
-          %form#contactform.form-horizontal{method: "POST"}
+      .col-md-6.col-md-offset-3
+        .pre-well
+          %h2
+            Let's work together...
+          %h5
+            You can email us directly, chat us on slack, or preferably fill out the form.
+        
+        %form#contactform{method: "POST"}
+          .well
+            %h4 Your Contact Info
+            .row
+              .col-sm-6
+                .form-group
+                  %label.control-label Name
+                  %input.form-control{name: "name", type: "text"}
+              .col-sm-6
+                .form-group
+                  %label.control-label Email
+                  %input.form-control{name: "_replyto", type: "email"}
+            .row
+              .col-sm-6
+                .form-group
+                  %label.control-label Phone
+                  %input.form-control{name: "phone", type: "tel"}
+              .col-sm-6
+                .form-group
+                  %label.control-label Company
+                  %input.form-control{name: "business", type: "email"}
+          .well
+            %h4 Project Info
+            .row
+              .col-xs-12
+                %label What type of services are you looking for? Check all that apply
+                .form-group
+                  .row
+                    .col-sm-6
+                      .checkbox
+                        %label
+                          %input{type: "checkbox"}
+                            Web Design / Redesign
+                      .checkbox
+                        %label
+                          %input{type: "checkbox"}
+                            Web Development / Coding
+                      .checkbox
+                        %label
+                          %input{type: "checkbox"}
+                            Marketing / SEO
+                      .checkbox
+                        %label
+                          %input{type: "checkbox"}
+                            Email Automation
+                    .col-sm-6
+                      .checkbox
+                        %label
+                          %input{type: "checkbox"}
+                            CRM Implementation
+                      .checkbox
+                        %label
+                          %input{type: "checkbox"}
+                            eCommerce
+                      .checkbox
+                        %label
+                          %input{type: "checkbox"}
+                            Search Result / Filters
+                      .checkbox
+                        %label
+                          %input{type: "checkbox"}
+                            Client Management
+
+            .row
+              .col-sm-6
+                .form-group
+                  %label Project Budget
+                  %select.form-control
+                    %option Less than $2000
+                    %option $2000 - $3000
+                    %option $3000 - $5000
+                    %option Over $5000
+              .col-sm-6
+                .form-group
+                  %label Project Timeline
+                  %select.form-control
+                    %option As soon as possible
+                    %option Within 2 weeks
+                    %option Within a month
+                    %option Undetermined
             .form-group
-              %label.col-sm-2.control-label Name:
-              .col-sm-10
-                %input.form-control{name: "name", type: "text"}
-            .form-group
-              %label.col-sm-2.control-label Email:
-              .col-sm-10
-                %input.form-control{name: "_replyto", type: "email"}
-            .form-group
-              %label.col-sm-2.control-label Organization Name or Website:
-              .col-sm-10
-                %input.form-control{name: "business", type: "email"}
-            .form-group
-              %label.col-sm-2.control-label Message:
-              .col-sm-10
-                %textarea.form-control{name: "notes", rows: "3"}
-            %input{name: "_gotcha", style: "display:none", type: "text"}/
-            .text-center
-              %input.btn.btn-success.btn-lg{type: "submit", value: "Start a Convo"}
-          :javascript
-            var contactform =  document.getElementById('contactform');
-            contactform.setAttribute('action', '//formspree.io/' + 'info' + '@' + 'getmikeanddan' + '.' + 'com');
-    %hr
+              %label.control-label Project Details
+              %textarea.form-control{name: "notes", rows: "3"}
+            %input.btn.btn-success.btn-lg{type: "submit", value: "Submit"}
+        :javascript
+          var contactform =  document.getElementById('contactform');
+          contactform.setAttribute('action', '//formspree.io/' + 'info' + '@' + 'getmikeanddan' + '.' + 'com');

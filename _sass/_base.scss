@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans:700,400);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:500,400);
 .hero {
 	font-family: 'Noto Sans', sans-serif;
 }
@@ -10,46 +10,63 @@
 	text-align: center;
 }
 
-.dark-bg {
-  background: url('/assets/grey_wash_wall.png') repeat;
-}
-.gradient-bg {
-  background: #080808; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#080808, #666666); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#080808, #666666); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#080808, #666666); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#080808, #666666); /* Standard syntax */
+.primary-bg {
+  background: #81BBFF;
+  background-image: url('/assets/bg-subtle.jpg');
 }
 
 .hero {
-	position: relative;
-  background: url('/assets/bar-ny.jpg') center center no-repeat;
-  background-size: cover;
+  position: relative;
   width: 100%;
-  height: 52vw;
+  height: 375px;
+  margin-bottom: 50px;
   h1 {
-  	color: #ECECEC;
-    font-size: 14vw;
-    font-weight: 700;
+  	color: #F5F5F5;
+    font-size: 48px;
     text-align: center;
-    text-transform: uppercase;
+    padding-top: 75px;
   }
-  h2 {
-  	color: #fff;
-  	font-size: 5vw;
-  	text-align: center;
-  	font-weight: 700;
-  	text-transform: uppercase;
+}
+.pre-well {
+  margin-top: 50px;
+  color: #F5F5F5;
+}
+
+#contactform .well {
+  border-color: orange;
+  border-width: 1px;
+  background: white;
+}
+
+.cta-btn {
+  font-size: 28px;
+  text-transform: uppercase;
+  background: #F5A623;
+  color: #F5F5F5;
+  &:hover, &:focus {
+    color: white;
+    font-weight: bold;
+    border-color: orange;
   }
 }
 
-h2 {
-  color: #D8D8D8;
-}
-
-h3, h4 {
-  font-weight: 300;
-  color: #D8D8D8;
+.content-box {
+  margin-top: 35px;
+  padding: 30px 8px 8px;
+  border: 1px solid #ccc;
+  position: relative;
+  .icon {
+    position: absolute;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: -25px;
+    .fa-circle {
+      color: orange;
+    }
+  }
 }
 
 .xy-center {
@@ -61,18 +78,6 @@ h3, h4 {
   transform: translate(-50%, -50%);
 }
 
-.btn-ghost {
-	padding: 15px 10px;
-	border: 2px solid #ECECEC;
-	color: #ECECEC;
-	text-align: center;
-	margin-top: 15px;
-	display: inline-block;
-}
-
-label {
-  color: #D8D8D8;
-}
 
 hr {
   margin-top: 50px;

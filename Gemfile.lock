@@ -145,6 +145,3 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-haml
-
-BUNDLED WITH
-   1.10.6
