@@ -20,3 +20,6 @@ destination: ./_site
 
 # Build settings
 markdown: kramdown
+gems:
+  - jekyll-assets
+  - react-jsx-sprockets

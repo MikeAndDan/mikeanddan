@@ -1,3 +1,5 @@
 source 'https://rubygems.org'
 gem 'github-pages'
 gem 'jekyll-haml'
+gem 'jekyll-assets'
+gem 'react-jsx-sprockets'
