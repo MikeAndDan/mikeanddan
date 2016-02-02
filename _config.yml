@@ -20,3 +20,5 @@ destination: ./_site
 
 # Build settings
 markdown: kramdown
+prod_mailbox: o80sm4ex@robot.zapier.com
+local_mailbox: info@getmikeanddan.com

@@ -54,7 +54,12 @@ layout: default
             Let's work together...
           %h5
             You can email us directly, chat us on slack, or preferably fill out the form.
-        %form#contact-form{action: "//formspree.io/mglobel@gmail.com", method: "POST"}
+        {% if site.serving %}
+          {% assign form_action = site.local_mailbox %}
+        {% else %}
+          {% assign form_action = site.prod_mailbox %}
+        {% endif %}
+        %form#contact-form{action: "//formspree.io/{{form_action}}", method: "POST"}
           .well
             %h4 Your Contact Info
             .row
