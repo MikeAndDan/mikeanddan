@@ -3,13 +3,13 @@ layout: default
 ---
 %header
   .container
-    %h1.text-center Freelance Web Designer and Developers
+    %h1.text-center Experienced Business Design and Development.
 .hero.primary-bg
   .text-center
-    %h1
-      Fast Fixes to Full Features
-      %br
-      Let us help you
+    %h1{style: "font-size:64px;"}
+      MIKE & DAN
+    %h3{style: "color:white;"}
+      Fast Fixes to Full Features.
     %a{href:"#contact", class: 'btn cta-btn', style: 'margin-top:25px;'}
       Get Started
       %i.fa.fa-chevron-down
@@ -54,7 +54,7 @@ layout: default
             Let's work together...
           %h5
             You can email us directly, chat us on slack, or preferably fill out the form.
-        %form#contactform{action: "//formspree.io/mglobel@gmail.com", method: "POST"}
+        %form#contact-form{action: "//formspree.io/mglobel@gmail.com", method: "POST"}
           .well
             %h4 Your Contact Info
             .row
@@ -74,7 +74,7 @@ layout: default
               .col-sm-6
                 .form-group
                   %label.control-label Company
-                  %input.form-control{name: "business", type: "email"}
+                  %input.form-control{name: "business", type: "text"}
           .well
             %h4 Project Info
             .row
@@ -85,42 +85,42 @@ layout: default
                     .col-sm-6
                       .checkbox
                         %label
-                          %input{type: "checkbox", value: "Web Design"}
+                          %input{type: "checkbox", name: "project_type[]", value: "Web Design"}
                             Web Design / Redesign
                       .checkbox
                         %label
-                          %input{type: "checkbox", value: "Web Development"}
+                          %input{type: "checkbox", name: "project_type[]", value: "Web Development"}
                             Web Development / Coding
                       .checkbox
                         %label
-                          %input{type: "checkbox", value: "Marketing"}
+                          %input{type: "checkbox", name: "project_type[]", value: "Marketing"}
                             Marketing / SEO
                       .checkbox
                         %label
-                          %input{type: "checkbox", value: "Email Automation"}
+                          %input{type: "checkbox", name: "project_type[]", value: "Email Automation"}
                             Email Automation
                     .col-sm-6
                       .checkbox
                         %label
-                          %input{type: "checkbox", value: "CRM Implementation"}
+                          %input{type: "checkbox", name: "project_type[]", value: "CRM Implementation"}
                             CRM Implementation
                       .checkbox
                         %label
-                          %input{type: "checkbox", value: "eCommerce"}
+                          %input{type: "checkbox", name: "project_type[]", value: "eCommerce"}
                             eCommerce
                       .checkbox
                         %label
-                          %input{type: "checkbox"}
+                          %input{type: "checkbox", name: "project_type[]", value: "Search Results"}
                             Search Result / Filters
                       .checkbox
                         %label
-                          %input{type: "checkbox"}
+                          %input{type: "checkbox", name: "project_type[]", value: "Client Management"}
                             Client Management
             .row
               .col-sm-6
                 .form-group
                   %label Project Budget
-                  %select.form-control{id: "projectBudget"}
+                  %select.form-control{name: "project_budjet"}
                     %option Less than $2000
                     %option $2000 - $3000
                     %option $3000 - $5000
@@ -128,7 +128,7 @@ layout: default
               .col-sm-6
                 .form-group
                   %label Project Timeline
-                  %select.form-control{id: "projectTimeline"}
+                  %select.form-control{name: "project_timeline"}
                     %option As soon as possible
                     %option Within 2 weeks
                     %option Within a month
@@ -138,25 +138,3 @@ layout: default
               %textarea.form-control{name: "projectDetails", rows: "3"}
             %input.btn.btn-success.btn-lg{type: "submit", value: "Submit"}
         :javascript
-          $("#contactform").submit(function(e) {
-            var form = $("#contactform");
-            var projectTypes = [];
-            $('#projectType').find('input:checked').each(function() {
-                projectTypes.push($(this).attr('value'));
-            });
-            $.ajax({
-              url: $(form).attr("action"),
-              method: "POST",
-              data: {
-                name: $(form).find("input[name='name']").val(),
-                _replyto: $(form).find("input[name='_replyto']").val(),
-                phone: $(form).find("input[name='phone']").val(),
-                business: $(form).find("input[name='business']").val(),
-                projectDetails: $(form).find("textarea[name='projectDetails']").val(),
-                projectBudget: $("#projectBudget option:selected").text(),
-                projectTimeline: $("#projectTimeline option:selected").text(),
-                projectInfo: projectTypes.join(", ")
-              },
-              dataType: "json",
-            });
-          });
