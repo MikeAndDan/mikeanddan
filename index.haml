@@ -13,7 +13,6 @@ layout: default
     %a{href:"#contact", class: 'btn cta-btn', style: 'margin-top:25px;'}
       Get Started
       %i.fa.fa-chevron-down
-
 .container
   .row
     .col-sm-4
@@ -24,7 +23,7 @@ layout: default
             %i.fa.fa-paint-brush.fa-stack-1x.fa-inverse
         %h4.text-center
           Design
-        %p 
+        %p
           The first, and most important step, to a succesful project is to build your brand and identity. We’ll help you get from IDEA to MOCKUP, making sure you website or mobile app is an organic extension of your business. Each project starts with a WIREFRAME so that you don’t waste time or money on unwanted development.
     .col-sm-4
       .content-box
@@ -55,8 +54,7 @@ layout: default
             Let's work together...
           %h5
             You can email us directly, chat us on slack, or preferably fill out the form.
-        
-        %form#contactform{method: "POST"}
+        %form#contactform{action: "//formspree.io/mglobel@gmail.com", method: "POST"}
           .well
             %h4 Your Contact Info
             .row
@@ -82,33 +80,33 @@ layout: default
             .row
               .col-xs-12
                 %label What type of services are you looking for? Check all that apply
-                .form-group
+                .form-group{id: "projectType"}
                   .row
                     .col-sm-6
                       .checkbox
                         %label
-                          %input{type: "checkbox"}
+                          %input{type: "checkbox", value: "Web Design / Redesign"}
                             Web Design / Redesign
                       .checkbox
                         %label
-                          %input{type: "checkbox"}
+                          %input{type: "checkbox", value: "Web Development / Coding"}
                             Web Development / Coding
                       .checkbox
                         %label
-                          %input{type: "checkbox"}
+                          %input{type: "checkbox", value: "Marketing / SEO"}
                             Marketing / SEO
                       .checkbox
                         %label
-                          %input{type: "checkbox"}
+                          %input{type: "checkbox", value: "Email Automation"}
                             Email Automation
                     .col-sm-6
                       .checkbox
                         %label
-                          %input{type: "checkbox"}
+                          %input{type: "checkbox", value: "CRM Implementation"}
                             CRM Implementation
                       .checkbox
                         %label
-                          %input{type: "checkbox"}
+                          %input{type: "checkbox", value: "eCommerce"}
                             eCommerce
                       .checkbox
                         %label
@@ -118,12 +116,11 @@ layout: default
                         %label
                           %input{type: "checkbox"}
                             Client Management
-
             .row
               .col-sm-6
                 .form-group
                   %label Project Budget
-                  %select.form-control
+                  %select.form-control{name: "projectBudget"}
                     %option Less than $2000
                     %option $2000 - $3000
                     %option $3000 - $5000
@@ -131,15 +128,38 @@ layout: default
               .col-sm-6
                 .form-group
                   %label Project Timeline
-                  %select.form-control
+                  %select.form-control{id: "projectTimeline", name: "projectTimeline"}
                     %option As soon as possible
                     %option Within 2 weeks
                     %option Within a month
                     %option Undetermined
             .form-group
               %label.control-label Project Details
-              %textarea.form-control{name: "notes", rows: "3"}
+              %textarea.form-control{name: "projectDetails", rows: "3"}
             %input.btn.btn-success.btn-lg{type: "submit", value: "Submit"}
         :javascript
-          var contactform =  document.getElementById('contactform');
-          contactform.setAttribute('action', '//formspree.io/' + 'info' + '@' + 'getmikeanddan' + '.' + 'com');
+          $("#contactform").validate({
+            submitHandler: function(form) {
+              // not actually passing the projectTypes to formkeep
+              var projectTypes = [];
+              $('#projectType').find('input:checked').each(function() {
+                  projectTypes.push($(this).attr('value'));
+              });
+              
+              $.ajax({
+                url: "//formspree.io/mglobel@gmail.com",
+                method: "POST",
+                data: {
+                  name: $(form).find("input[name='name']").val(),
+                  _replyto: $(form).find("input[name='_replyto']").val(),
+                  phone: $(form).find("input[name='phone']").val(),
+                  business: $(form).find("input[name='business']").val(),
+                  projectType: projectTypes.join(", "),
+                  projectBudget: $("#projectBudget option:selected").text(),
+                  projectTimeline: $("#projectTimeline option:selected").text(),
+                  projectDetails: $(form).find("select[name='projectDetails']' option:selected").text(),
+                },
+                dataType: "json"
+              });
+            }
+          });
