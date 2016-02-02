@@ -12,7 +12,7 @@ From master:
 1. `mkdir gh-pages`
 2. `cd gh-pages`
 3. `git init .`
-4. `git commit -am "Initialize"`
+4. `git checkout -b gh-pages`
 5. `git remote add origin https://github.com/MikeAndDan/mikeanddan.git`
 6. `cd ..`
 
