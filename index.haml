@@ -85,15 +85,15 @@ layout: default
                     .col-sm-6
                       .checkbox
                         %label
-                          %input{type: "checkbox", value: "Web Design / Redesign"}
+                          %input{type: "checkbox", value: "Web Design"}
                             Web Design / Redesign
                       .checkbox
                         %label
-                          %input{type: "checkbox", value: "Web Development / Coding"}
+                          %input{type: "checkbox", value: "Web Development"}
                             Web Development / Coding
                       .checkbox
                         %label
-                          %input{type: "checkbox", value: "Marketing / SEO"}
+                          %input{type: "checkbox", value: "Marketing"}
                             Marketing / SEO
                       .checkbox
                         %label
@@ -120,7 +120,7 @@ layout: default
               .col-sm-6
                 .form-group
                   %label Project Budget
-                  %select.form-control{name: "projectBudget"}
+                  %select.form-control{id: "projectBudget"}
                     %option Less than $2000
                     %option $2000 - $3000
                     %option $3000 - $5000
@@ -128,7 +128,7 @@ layout: default
               .col-sm-6
                 .form-group
                   %label Project Timeline
-                  %select.form-control{id: "projectTimeline", name: "projectTimeline"}
+                  %select.form-control{id: "projectTimeline"}
                     %option As soon as possible
                     %option Within 2 weeks
                     %option Within a month
@@ -138,28 +138,25 @@ layout: default
               %textarea.form-control{name: "projectDetails", rows: "3"}
             %input.btn.btn-success.btn-lg{type: "submit", value: "Submit"}
         :javascript
-          $("#contactform").validate({
-            submitHandler: function(form) {
-              // not actually passing the projectTypes to formkeep
-              var projectTypes = [];
-              $('#projectType').find('input:checked').each(function() {
-                  projectTypes.push($(this).attr('value'));
-              });
-              
-              $.ajax({
-                url: "//formspree.io/mglobel@gmail.com",
-                method: "POST",
-                data: {
-                  name: $(form).find("input[name='name']").val(),
-                  _replyto: $(form).find("input[name='_replyto']").val(),
-                  phone: $(form).find("input[name='phone']").val(),
-                  business: $(form).find("input[name='business']").val(),
-                  projectType: projectTypes.join(", "),
-                  projectBudget: $("#projectBudget option:selected").text(),
-                  projectTimeline: $("#projectTimeline option:selected").text(),
-                  projectDetails: $(form).find("select[name='projectDetails']' option:selected").text(),
-                },
-                dataType: "json"
-              });
-            }
+          $("#contactform").submit(function(e) {
+            var form = $("#contactform");
+            var projectTypes = [];
+            $('#projectType').find('input:checked').each(function() {
+                projectTypes.push($(this).attr('value'));
+            });
+            $.ajax({
+              url: $(form).attr("action"),
+              method: "POST",
+              data: {
+                name: $(form).find("input[name='name']").val(),
+                _replyto: $(form).find("input[name='_replyto']").val(),
+                phone: $(form).find("input[name='phone']").val(),
+                business: $(form).find("input[name='business']").val(),
+                projectDetails: $(form).find("textarea[name='projectDetails']").val(),
+                projectBudget: $("#projectBudget option:selected").text(),
+                projectTimeline: $("#projectTimeline option:selected").text(),
+                projectInfo: projectTypes.join(", ")
+              },
+              dataType: "json",
+            });
           });
