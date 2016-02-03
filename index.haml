@@ -3,11 +3,11 @@ layout: default
 ---
 %header
   .container
-    %h1.text-center Experienced Business Design and Development.
+    %h1.text-center M & D
 .hero.primary-bg
   .text-center
-    %h1{style: "font-size:64px;"}
-      MIKE & DAN
+    %h2{style: "font-size:54px; color:white; padding-top: 50px;"}
+      Experienced Design and Development.
     %h3{style: "color:white;"}
       Fast Fixes to Full Features.
     %a{href:"#contact", class: 'btn cta-btn', style: 'margin-top:25px;'}
@@ -127,19 +127,18 @@ layout: default
                   %label Project Budget
                   %select.form-control{name: "project_budjet"}
                     %option Less than $2000
-                    %option $2000 - $3000
-                    %option $3000 - $5000
-                    %option Over $5000
+                    %option $3000 - $6000
+                    %option $6000 - $10,000
+                    %option Over $15,000
               .col-sm-6
                 .form-group
                   %label Project Timeline
                   %select.form-control{name: "project_timeline"}
                     %option As soon as possible
-                    %option Within 2 weeks
                     %option Within a month
+                    %option Within the quarter
                     %option Undetermined
             .form-group
-              %label.control-label Project Details
-              %textarea.form-control{name: "projectDetails", rows: "3"}
+              %label.control-label Project Details (Optional)
+              %textarea.form-control{name: "project_details", rows: "3"}
             %input.btn.btn-success.btn-lg{type: "submit", value: "Submit"}
-        :javascript
