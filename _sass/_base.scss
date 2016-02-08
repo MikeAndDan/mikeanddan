@@ -11,20 +11,28 @@
 }
 
 .primary-bg {
-  background: #81BBFF;
-  background-image: url('/assets/bg-subtle.jpg');
+  background: url('/assets/tile-bg-2.png') repeat;
 }
 
 .hero {
   position: relative;
   width: 100%;
-  height: 375px;
+  height: 500px;
   margin-bottom: 50px;
+  text-align: center;
   h1 {
-  	color: #F5F5F5;
-    font-size: 48px;
-    text-align: center;
-    padding-top: 75px;
+    color: #F5F5F5;
+    font-size: 100px;
+    margin-top: 0;
+    padding-top: 80px;
+    span {
+      vertical-align: middle;
+      font-size: 30px;
+    }
+  }
+  h2 {
+    color: #F5F5F5;
+    font-size: 50px;
   }
 }
 .pre-well {
@@ -55,6 +63,10 @@
   padding: 30px 8px 8px;
   border: 1px solid #ccc;
   position: relative;
+  span {
+    color: orange;
+    font-weight: bold;
+  }
   .icon {
     position: absolute;
     text-align: center;
