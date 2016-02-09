@@ -1,11 +1,16 @@
 ---
 layout: default
 ---
+:javascript
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
 %section.hero.primary-bg
   .text-center
     %h1
-      MIKE 
-      %span & 
+      MIKE
+      %span &
       DAN&nbsp;
     %h2
       Fast Fixes to Full Features
@@ -24,7 +29,11 @@ layout: default
         %h4.text-center
           Design
         %p
-          The first, and most important step, to a succesful project is to build your brand and identity. We’ll help you get from <span>IDEA</span> to <span>MOCKUP</span>, making sure you website or mobile app is an organic extension of your business. Each project starts with a <span>WIREFRAME</span> so that you don’t waste time or money on unwanted development.
+          Succesful software starts with good design. Usually a project
+          begins with a <span>WIREFRAME</span> so that you don't waste time or
+          money on unpredictable development. We’ll work alongside you to get from
+          <span>IDEA</span> to <span>MOCKUP</span>, so that the end result is
+          a meaningful extension of your business.
     .col-sm-4
       .content-box
         .icon
@@ -34,7 +43,12 @@ layout: default
         %h4.text-center
           Develop
         %p
-          Our process includes rapid prototyping with <span>HTML5</span>, <span>CSS3</span>, and <span>JAVASCRIPT</span>. We use popular frameworks like <span>RAILS</span>, <span>BOOTSTRAP</span>, and <span>REACTJS</span> so that you’re never left stranded with custom, costly code. From MVP to full-featured, we’ll make sure your business can grow into the future, and even be ready for a future developer.
+          Our approach includes rapid prototyping with <span>HTML5</span>,
+          <span>CSS3</span>, and <span>JAVASCRIPT</span>. Our focus is to
+          provide a process that is <span>TRANSPARENT</span> and
+          <span>EXTENSIBLE</span>. From MVP to
+          full-featured, we’ll make sure your business can grow into the future,
+          and even be ready for future developers.
     .col-sm-4
       .content-box
         .icon
@@ -44,7 +58,12 @@ layout: default
         %h4.text-center
           Optimize
         %p
-          Releasing your website is just the first step to building a successful company. Our greatest value is helping you identify how you can make the most of your business through <span>A/B TESTING</span>, <span>CRM AUTOMATION</span>, and <span>LEAD GENERATION</span>. Building a website isn’t just about delivering content, it’s about engaging your customers.
+          A website is more than just content, it’s the future for
+          <span>ENGAGING</span> your customers. Let us help
+          you identify how to make the most of your business through
+          <span>A/B TESTING</span>, <span>LEAD GENERATION</span>,
+          and <span>CRM AUTOMATION</span>. We'll help you stay focused on
+          building your business, not lengthy software projects.
 #contact.primary-bg
   .container{style: 'margin-top:50px'}
     .row
@@ -53,7 +72,8 @@ layout: default
           %h2
             Let's work together...
           %h5
-            You can email us directly, chat us on slack, or preferably fill out the form.
+            You can email us directly or fill out the form to request a project
+            quote.
         {% if site.serving %}
           {% assign form_action = site.local_mailbox %}
         {% else %}
@@ -81,10 +101,10 @@ layout: default
                   %label.control-label Company
                   %input.form-control{name: "business", type: "text"}
           .well
-            %h4 Project Info
+            %h4 Project Request
             .row
               .col-xs-12
-                %label What type of services are you looking for? Check all that apply
+                %label What types of services are you looking for? Check all that apply
                 .form-group{id: "projectType"}
                   .row
                     .col-sm-6
@@ -125,26 +145,22 @@ layout: default
               .col-sm-6
                 .form-group
                   %label Project Budget
-                  %select.form-control{name: "project_budjet"}
-                    %option Less than $2000
-                    %option $2000 - $3000
-                    %option $3000 - $5000
-                    %option Over $5000
+                  %select.form-control{name: "project_budget"}
+                    %option Under $2,000
+                    %option{selected: "selected"} $2,000 - $5,000
+                    %option $5,000 - $10,000
+                    %option $10,000 - $15,000
+                    %option $15,000 - $30,000
+                    %option Enterprise
               .col-sm-6
                 .form-group
                   %label Project Timeline
                   %select.form-control{name: "project_timeline"}
                     %option As soon as possible
-                    %option Within 2 weeks
-                    %option Within a month
+                    %option{selected: "selected"} Within a month
+                    %option Within 1 to 2 quarters
                     %option Undetermined
             .form-group
-              %label.control-label Project Details
-              %textarea.form-control{name: "projectDetails", rows: "3"}
-            %input.btn.btn-success.btn-lg{type: "submit", value: "Submit"}
-        :javascript
-%footer
-  .container
-    %h3.text-center
-      Made in Austin || Mike & Dan
-
+              %label.control-label Project Details <a href="#" data-toggle="tooltip" data-placement="right" title="Tell us a few sentences about yourself, your company, and what you all are trying to accomplish. If you can, please also include any relevant information about your current technology, or any other factors that might impact the project.">What to include?</a>
+              %textarea.form-control{name: "project_details", rows: "3"}
+            %input.btn.btn-success.btn-lg{type: "submit", value: "Submit Request"}
