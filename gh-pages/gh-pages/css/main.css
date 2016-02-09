@@ -1,4 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans:500,400);
+strong {
+  color: #F5A623; }
+
 .hero {
   font-family: 'Noto Sans', sans-serif; }
 
